@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+
+android {
+//    compileSdkVersion 28
+//    buildToolsVersion "28.0.3"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.ygwl.lz.lzvideoupdate"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+//    compile 'com.android.support:appcompat-v7:28.+'
+    testCompile 'junit:junit:4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:25.3.1"
+    compile "com.android.support:design:25.3.1"
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile "com.android.support:recyclerview-v7:25.3.1"
+    compile(name: 'PullToRefresh_Library-release', ext: 'aar')
+    compile(name: 'AudioTalk-release', ext: 'aar')
+    compile(name: 'BaseLib-release', ext: 'aar')
+    compile(name: 'DataAdapteeModule-release', ext: 'aar')
+    compile(name: 'DataAdapterModule-release', ext: 'aar')
+    compile(name: 'DHCommon-release', ext: 'aar')
+    compile(name: 'DssPlaySDK-release', ext: 'aar')
+    compile(name: 'EntityDefine-release', ext: 'aar')
+    compile(name: 'LogModule-release', ext: 'aar')
+    compile(name: 'OrmliteSqlcipherModlule-release', ext: 'aar')
+    compile(name: 'PlayManager-release', ext: 'aar')
+    compile(name: 'WindowComponent-release', ext: 'aar')
+}

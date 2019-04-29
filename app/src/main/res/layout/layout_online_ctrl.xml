@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_playonline_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/videoPopBg"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="5"
+        android:background="@color/transparent"
+    />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+    >
+        <CheckBox
+            android:id="@+id/chk_play"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/checkbox_play"
+            android:button="@null"
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+    >
+        <CheckBox
+            android:id="@+id/chk_record"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/checkbox_record"
+            android:button="@null"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+    >
+        <Button
+            android:id="@+id/btn_capture"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_photo"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+    >
+        <CheckBox
+            android:id="@+id/chk_cloud"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/checkbox_cloud"
+            android:button="@null"
+        />
+    </RelativeLayout>
+
+</LinearLayout>

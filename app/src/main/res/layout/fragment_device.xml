@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/device_list_title"
+        layout="@layout/device_title"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/common_blank_layout"/>
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/deviceChannellist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@android:color/transparent"
+            ptr:ptrDrawable="@drawable/common_loading_circle"
+            ptr:ptrHeaderBackground="@android:color/white"
+            ptr:ptrHeaderTextColor="@android:color/darker_gray"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</LinearLayout>
